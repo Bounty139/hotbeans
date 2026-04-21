@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hot Beans</title>
+<style>
+/* Reset & common styles */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; line-height:1.6; background:#f4f4f4; color:#333; }
+header { background:#0073e6; color:#fff; padding:20px 0; text-align:center; }
+nav { background:#333; }
+nav ul { list-style:none; display:flex; justify-content:center; }
+nav ul li { margin:0 15px; }
+nav ul li a { color:#fff; text-decoration:none; padding:10px; display:block; transition: background 0.3s; cursor:pointer; }
+nav ul li a:hover { background:#0073e6; border-radius:5px; }
+main { padding:20px; max-width:900px; margin:20px auto; background:#fff; box-shadow:0 0 10px rgba(0,0,0,0.1); min-height:400px; }
+footer { text-align:center; padding:15px; background:#333; color:#fff; margin-top:20px; }
+
+/* Page sections */
+section { display:none; }
+section.active { display:block; }
+
+/* Careers page styles */
+.jobs-container { display:flex; flex-direction:column; gap:15px; }
+.job-listing { border:1px solid #ddd; padding:15px; border-radius:5px; transition:box-shadow 0.3s; }
+.job-listing:hover { box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+.job-title { font-size:1.2em; font-weight:bold; margin-bottom:5px; }
+.job-location, .job-type { font-size:0.9em; color:#555; margin-bottom:5px; }
+.job-description { margin-bottom:10px; }
+.apply-btn { display:inline-block; padding:8px 15px; background:#0073e6; color:#fff; text-decoration:none; border-radius:5px; transition:background 0.3s; }
+.apply-btn:hover { background:#005bb5; }
+
+/* Contact form styles */
+form { display:flex; flex-direction:column; gap:10px; }
+input, textarea { padding:10px; border:1px solid #ccc; border-radius:5px; width:100%; }
+button { padding:10px; border:none; border-radius:5px; background:#0073e6; color:#fff; cursor:pointer; transition:background 0.3s; }
+button:hover { background:#005bb5; }
+
+h2 { color:#0073e6; margin-bottom:15px; }
+ul { margin-left:20px; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Hot Beans</h1>
+    <p id="header-subtitle">Your daily dose of technoligy!</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('about')">About Us</a></li>
+        <li><a onclick="showPage('careers')">Our Team</a></li>
+        <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h2>Welcome to Hot Beans!</h2>
+        <p>We are passionate about technology and committed to building a strong, innovative community around it. Our goal is to create meaningful solutions, share knowledge, and collaborate with people who are excited about the future of technology.</p>
+
+     </p> Through our work, we focus on creativity, problem-solving, and continuous improvement. Our team brings together diverse skills and perspectives to develop projects that make a real impact.</p>
+            
+    </p>Explore our website to learn more about who we are, meet the people behind our work, and discover the ideas and projects that drive us forward. You can also find information about our values, what we’re currently building, and the opportunities available to join our growing team.</p>
+            
+</p>Whether you're looking to learn more about our work or interested in becoming part of our journey, we invite you to explore and connect with us.</p>
+            </p>
+
+        <h2>Latest Updates</h2>
+        <ul>
+            <li>At Hot Beans, we are constantly growing, innovating, and expanding our digital capabilities. Our team is currently working on several exciting projects aimed at helping businesses strengthen their online presence and improve user experiences across modern web platforms.</li>
+            <li>Recently, we have been focusing on developing responsive websites that perform seamlessly across all devices, from desktops to smartphones. Our developers are also experimenting with modern frameworks and tools to build faster, more secure, and scalable web applications.
+            <li>In addition, Hot Beans continues to invest in the next generation of developers. We are expanding our recruitment efforts and offering new opportunities for aspiring web developers who are passionate about coding and digital innovation. Through mentorship and collaborative projects, we aim to help young professionals develop real-world skills in web design, development, and user experience.</li>
+            <li>Our team is also improving internal workflows and testing processes to ensure that every website we deliver meets the highest standards of performance, accessibility, and security. From front-end design to back-end functionality, we are committed to building solutions that help our clients succeed in an increasingly digital world.</li>
+            <li>Stay connected with Hot Beans to hear about our newest projects, technology updates, and career opportunities as we continue shaping the future of web development.</li>
+        </ul>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Hot Beans</h2>
+        <p>Hot Beans was founded with the mission of bringing high-quality technology and digital solutions to technology lovers everywhere. From the very beginning, our goal has been to make technology more accessible, reliable, and exciting for everyone who uses it. We believe that technology should not only perform well but also make a positive impact on people’s everyday lives.</p>
+        <p>At Hot Beans, we focus strongly on quality, sustainability, and community. Every product, service, or project we work on is designed with care, ensuring that it meets high standards of performance while also considering its environmental and social impact. By combining innovation with responsibility, we aim to create technology that people can trust and enjoy.</p>
+
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide exceptional technology experiences while supporting the environment and the communities around us. We strive to develop solutions that are not only powerful and efficient but also sustainable and forward-thinking.
+         <p>We are committed to reducing environmental impact wherever possible, encouraging responsible technology use, and supporting initiatives that benefit local and global communities. Through innovation, collaboration, and ethical practices, we aim to contribute to a better technological future.</p>
+        
+        <h2>Our Team</h2>
+        <p>Our team is made up of passionate technology experts, developers, designers, and self-proclaimed tech nerds who truly love what they do. Each member of our team brings unique skills, creativity, and dedication to every project we undertake.
+        </p>We believe that great technology comes from teamwork, curiosity, and continuous learning. Our team stays up to date with the latest industry trends and innovations, allowing us to deliver modern and effective solutions. Most importantly, we share a common passion for technology and a commitment to providing the best possible experience for our users.</p>
+    
+    </section>  
+
+<!-- Careers Section -->
+<section id="careers">
+    <h2>Current Job Openings</h2>
+
+    <div class="jobs-container">
+        <div class="job-listing">
+            <div class="job-title">Software Developer</div>
+            <div class="job-location">Location: Downtown</div>
+            <div class="job-type">Type: Full-Time</div>
+            <div class="job-description">
+                We are looking for a friendly and skilled developer to improve and update the latest technology
+            </div>
+            <a href="mailto:careers@hotbeans.com?subject=Application%20for%20Barista" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-title">Social Media Manager</div>
+            <div class="job-location">Location: Remote</div>
+            <div class="job-type">Type: Part-Time</div>
+            <div class="job-description">
+                Seeking a creative social media manager to grow our online presence.
+            </div>
+            <a href="mailto:careers@hotbeans.com?subject=Application%20for%20Social%20Media%20Manager" class="apply-btn">Apply Now</a>
+        </div>
+
+        <!-- New Job 1 -->
+        <div class="job-listing">
+            <div class="job-title">Technology Manager</div>
+            <div class="job-location">Location: Office</div>
+            <div class="job-type">Type: Full-Time</div>
+            <div class="job-description">
+                We are hiring a technology manager to manage the technology and help others around the workplace.
+            </div>
+            <a href="mailto:careers@hotbeans.com?subject=Application%20for%20Coffee%20Roaster" class="apply-btn">Apply Now</a>
+        </div>
+
+        <!-- New Job 2 -->
+        <div class="job-listing">
+            <div class="job-title">Customer Service Representative</div>
+            <div class="job-location">Location: Downtown</div>
+            <div class="job-type">Type: Part-Time</div>
+            <div class="job-description">
+                Join our front-line team helping customers, handling inquiries, and providing an exceptional technology shop experience.
+            </div>
+            <a href="mailto:careers@hotbeans.com?subject=Application%20for%20Customer%20Service%20Representative" class="apply-btn">Apply Now</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or inquiries? Send us a message!</p>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form values
+    const name = encodeURIComponent(document.getElementById('name').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const message = encodeURIComponent(document.getElementById('message').value);
+
+    // Construct mailto link
+    const mailtoLink = `mailto:info@hotbeans.com?subject=Contact%20from%20Hot%20Beans&body=Name:%20${name}%0AEmail:%20${email}%0A%0A${message}`;
+
+    // Open user's email client
+    window.location.href = mailtoLink;
+});
+</script>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Hot Beans. All rights reserved.</p>
+</footer>
+
+<script>
+function showPage(pageId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('main section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    
+    // Show selected section
+    document.getElementById(pageId).classList.add('active');
+
+    // Update header subtitle
+    const subtitles = {
+        home: "Your daily dose of freshly roasted coffee!",
+        about: "Learn more about our story",
+        careers: "Join our amazing team!",
+        contact: "Contact us for more information"
+    };
+    document.getElementById('header-subtitle').textContent = subtitles[pageId];
+}
+</script>
+
+</body>
+</html>
